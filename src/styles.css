@@ -1,0 +1,107 @@
+/* General body styling */
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #eeaeca,#94bbe9);
+ 
+  margin: 0;
+}
+.heading{
+  /* margin-top: 30px; */
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 3px 3px 6px #0a0a0a;
+}
+ 
+/* Calculator container */
+.calculator {
+  width: 300px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+ 
+/* Display screen */
+.display {
+  width: 95%;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: #0e0d0d;
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+ 
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+ 
+/* Button styling */
+button {
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  background: rgb(122, 128, 128);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(5px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+ 
+/* Button hover effect */
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1);
+}
+ 
+/* Button click effect */
+button:active {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0.95);
+}
+ 
+/* Special button colors */
+button:nth-child(1) { background: #ff4b5c; } /* C - Red */
+button:nth-child(2) { background: #ffa502; } /* Backspace - Orange */
+button:nth-child(3) { background: #1e90ff; } /* / - Blue */
+button:nth-child(17) { background: #2ed573; } /* = - Green */
+ 
+/* Special buttons hover */
+button:nth-child(1):hover { box-shadow: 0 0 10px #ff4b5c; }
+button:nth-child(2):hover { box-shadow: 0 0 10px #ffa502; }
+button:nth-child(3):hover { box-shadow: 0 0 10px #1e90ff; }
+button:nth-child(17):hover { box-shadow: 0 0 10px #2ed573; }
+ 
+/* Responsive Design */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+  button {
+    height: 50px;
+    font-size: 18px;
+  }
+}
